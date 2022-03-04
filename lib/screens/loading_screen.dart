@@ -19,7 +19,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
         return Future.error('Location Not Available');
       }
     } else {
-      throw Exception('Error');
+      getLocationData();
+      // throw Exception('Error');
     }
     return await Geolocator.getCurrentPosition();
   }
